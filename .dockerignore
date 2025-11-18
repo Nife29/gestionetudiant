@@ -1,0 +1,56 @@
+# Dossiers liés au développement front-end et node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Dossiers et fichiers liés à Git (pas besoin dans l'image)
+.git/
+.gitignore
+
+# Fichiers d'environnement sensibles (ne pas embarquer)
+.env
+.env.*
+!.env.example
+
+# Logs générés par Laravel (exclure, sauf .gitkeep pour garder dossier)
+storage/logs/*
+!storage/logs/.gitkeep
+
+# Cache Laravel (exclure, sauf .gitkeep pour garder dossier)
+storage/framework/cache/*
+!storage/framework/cache/.gitkeep
+storage/framework/sessions/*
+!storage/framework/sessions/.gitkeep
+storage/framework/views/*
+!storage/framework/views/.gitkeep
+
+# Cache bootstrap Laravel (exclure, sauf .gitkeep pour garder dossier)
+bootstrap/cache/*
+!bootstrap/cache/.gitkeep
+
+# Dossier de tests (pas besoin en production)
+tests/
+
+# Fichier de config PHPUnit pour les tests
+phpunit.xml
+
+# Documentation et licences (pas utiles en prod)
+README.md
+CHANGELOG.md
+LICENSE
+
+# Fichiers de configuration liés à l'éditeur ou IDE
+.editorconfig
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+
+# Fichiers de configuration Docker que tu ne souhaites pas embarquer dans l'image
+docker-compose.yml
+.dockerignore
+
+# Fichiers temporaires et systèmes (Mac, Windows, logs, etc)
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
