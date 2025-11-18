@@ -26,12 +26,12 @@ services:
       - key: DB_CONNECTION
         value: pgsql
       - key: DB_HOST
-        value: dpg-d4e7htrgk3sc73bi9iv0-a
+        value: dpg-d4e9qqngi27c73cijo80-a
       - key: DB_PORT
         value: 5432
       - key: DB_DATABASE
-        value: gestion_etudiants
+        value: gestion_etudiants_graf
       - key: DB_USERNAME
         value: gestion_etudiants_8ct0_user
       - key: DB_PASSWORD
-        value: wNGIDVWYLcdpvvns77I5m1yElZGGIuJz
+        value: ylMhh8NyI3vcIvCTbcONsA4c0gqdWxMz
