@@ -1,26 +1,23 @@
 services:
   - type: web
-    name: gestion_etudiants
+    name: gestionetudiant
     env: docker
     plan: free
-    branch: main
+    branch: principal
+    repo: https://github.com/Nife29/gestionetudiant
     dockerfilePath: ./Dockerfile
+    buildCommand: ""
+    startCommand: php artisan serve --host=0.0.0.0 --port=8000
     envVars:
-      - key: APP_KEY
-        value: ton_app_key
       - key: APP_ENV
         value: production
+      - key: APP_KEY
+        generateValue: true
       - key: APP_DEBUG
         value: false
+      - key: APP_URL
+        value: https://gestionetudiant-6oaa.onrender.com
+      - key: LOG_CHANNEL
+        value: stderr
       - key: DB_CONNECTION
-        value: pgsql
-      - key: DATABASE_URL
-        fromDatabase:
-          name: oswald
-          property: connectionString
-
-databases:
-  - name: oswald
-    plan: free
-    databaseName: laravel
-    user: laravel
+        value: sqlite
