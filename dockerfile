@@ -26,13 +26,8 @@ COPY . .
 # Étape 6 : Installer les dépendances Laravel
 RUN composer install --no-dev --optimize-autoloader
 
-# Étape 7 : Générer les caches Laravel
-RUN php artisan config:cache \
-    && php artisan route:cache \
-    && php artisan view:cache
-
-# Étape 8 : Exposer le port utilisé par Laravel
+# Étape 7 : Exposer le port utilisé par Laravel
 EXPOSE 8000
 
-# Étape 9 : Commande de démarrage
+# Étape 8 : Démarrer Laravel sur le port dynamique fourni par Render
 CMD ["sh", "-c", "php artisan serve --host=0.0.0.0 --port=${PORT}"]
