@@ -35,4 +35,4 @@ RUN php artisan config:cache \
 EXPOSE 8000
 
 # Étape 9 : Commande de démarrage
-CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=${PORT}"]
