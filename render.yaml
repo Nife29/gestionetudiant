@@ -30,7 +30,7 @@ services:
       - key: DB_PORT
         value: 5432
       - key: DB_DATABASE
-        value: gestion_etudiant
+        value: gestion_etudiants
       - key: DB_USERNAME
         value: gestion_etudiants_8ct0_user
       - key: DB_PASSWORD
